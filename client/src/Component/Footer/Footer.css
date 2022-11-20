@@ -1,0 +1,29 @@
+.crd {
+  background-color: #eeeeec;
+}
+
+.clm {
+  background-color: #eeeeec;
+  border: 0ch;
+}
+
+.rowset {
+  background-color: #eeeeec;
+  border: 0ch;
+}
+
+.fb {
+  margin-left: -10px;
+}
+
+.ig {
+  margin-left: 10px;
+}
+
+.wa {
+  margin-left: 15px;
+}
+
+.header-ft {
+  font-family: url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&family=Ubuntu:wght@700&display=swap");
+}

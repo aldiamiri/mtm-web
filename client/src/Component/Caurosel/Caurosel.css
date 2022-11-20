@@ -1,0 +1,27 @@
+.carousel-item {
+  margin-top: -100px;
+}
+
+.carousel {
+  margin-top: -100px;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-item {
+    margin-top: -30px;
+  }
+
+  .carousel {
+    margin-top: -100px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .carousel-item {
+    margin-top: -30px;
+  }
+
+  .carousel {
+    margin-top: -100px;
+  }
+}
