@@ -1,17 +1,21 @@
-import "./App.css";
-import CarouselFade from "./Component/Caurosel/Caurosel";
-import OurProduct from "./Component/OurProduct/OurProduct";
-import Footer from "./Component/Footer/Footer";
-import Support from "./Component/Support/Support";
+import LandingPage from "./LandingPage";
+import InputData from "./Component/FormInput/Index";
+import InputMerk from "./Component/FormInputMerk/Index";
+import InputCarousel from "./Component/FormInputCarousel/Index";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <CarouselFade />
-      <OurProduct />
-      <Support />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/input" element={<InputData />} />
+          <Route path="/merk" element={<InputMerk />} />
+          <Route path="/carousel" element={<InputCarousel />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

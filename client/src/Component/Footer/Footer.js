@@ -27,7 +27,7 @@ function Footer() {
           </Row>
         </Card.Body>
         <hr></hr>
-        <p>@2022 PT.Meta Techno Mandiri Privacy Policy All Rights. Design By Meta Techno Mandiri </p>
+        <p className="ftgraft">@2022 PT.Meta Techno Mandiri Privacy Policy All Rights. Design By Meta Techno Mandiri </p>
       </Card>
     </div>
   );

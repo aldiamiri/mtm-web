@@ -13,10 +13,10 @@ function Support() {
   return (
     <div>
       <Container className="mt-5">
-        <Row>
+        <Row className="justify-content-center">
           <h1>AVAILABLE</h1>
           <hr></hr>
-          <Col data-aos="fade-down">
+          <Col xs={12} md={12} data-aos="fade-down">
             <img className="logo-asus" src={asus} alt="asus-logo"></img>
             <img className="logo-lenovo" src={lenovo} alt="lenovo-logo"></img>
             <img className="logo-hp" src={hp} alt="hp-logo"></img>
