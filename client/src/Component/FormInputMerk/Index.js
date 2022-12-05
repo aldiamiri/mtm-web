@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
@@ -6,8 +6,18 @@ import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import NavbarInput from "../NavbarInput/NavbarInput";
 import Table from "react-bootstrap/Table";
+import axios from "axios";
 
 function InputMerk() {
+  const url = "http://localhost:4000/api/merk";
+  const [datas, setDatas] = useState([]);
+
+  useEffect(() => {
+    axios.get(url).then((res) => {
+      setDatas(res.data);
+    });
+  });
+
   return (
     <Container className="mt-5">
       <NavbarInput />
@@ -39,13 +49,15 @@ function InputMerk() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>
-              <Button variant="warning">Edit</Button> <Button variant="danger">Hapus</Button>
-            </td>
-          </tr>
+          {datas.map((data, index) => (
+            <tr>
+              <td>{index + 1}</td>
+              <td>{data.nm_merk}</td>
+              <td>
+                <Button variant="warning">Edit</Button> <Button variant="danger">Hapus</Button>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </Table>
     </Container>

@@ -33,5 +33,6 @@ Object.keys(db).forEach((modelName) => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 db.barang = require("./tblbrg")(sequelize, Sequelize);
+db.merk = require("./merk")(sequelize, Sequelize);
 
 module.exports = db;

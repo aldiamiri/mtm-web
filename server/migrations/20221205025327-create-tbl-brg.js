@@ -9,16 +9,19 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       nm_prod: {
-        type: Sequelize.TEXT
+        type: Sequelize.STRING
       },
       nm_merk: {
-        type: Sequelize.TEXT
+        type: Sequelize.STRING
       },
       desk_brg: {
         type: Sequelize.TEXT
       },
       spek_brg: {
         type: Sequelize.TEXT
+      },
+      img_brg: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

@@ -2,11 +2,12 @@ const { tblBrg } = require("./models");
 
 tblBrg
   .create({
-    nm_prod: "Asus XXX",
+    nm_prod: "Asus XXXX",
     nm_merk: "Asus",
-    desk_brg: "XXX",
-    spek_brg: "ZZZ",
+    desk_brg: "Tannsasas",
+    spek_brg: "Pmddsdsdsmmmm",
+    img_brg: "dsdfsfssfsascxcscsfsf",
   })
-  .then((tblbrg) => {
-    console.log(tblbrg);
+  .then((tblBrg) => {
+    console.log(tblBrg);
   });

@@ -27,14 +27,14 @@ function InputData() {
     });
   });
 
-  function handlerChange(e) {
+  const handlerChange = (e) => {
     setInitialData({ ...initialData, [e.target.name]: e.target.value });
-  }
+  };
 
-  function handlerSubmit(e) {
+  const handlerSubmit = (e) => {
     e.preventDefault();
     axios.post(url, initialData);
-  }
+  };
 
   return (
     <Container className="mt-5">
@@ -89,6 +89,15 @@ function InputData() {
           </Form.Label>
           <Col md="7" sm="7" xs="7" lg="5">
             <Form.Control value={spek_brg} name="spek_brg" onChange={handlerChange} as="textarea" placeholder="Spesifikasi Barang" rows={3} />
+          </Col>
+        </Form.Group>
+
+        <Form.Group as={Row} className="mb-3" controlId="formFile">
+          <Form.Label column sm="4" xs="4" md={{ span: 4, offset: 1 }} lg={{ span: 4, offset: 1 }}>
+            Upload Image
+          </Form.Label>
+          <Col md="7" sm="7" xs="7" lg="5">
+            <Form.Control type="file" />
           </Col>
         </Form.Group>
 
